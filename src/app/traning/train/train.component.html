@@ -1,0 +1,13 @@
+<div>
+  <input type="text" [(ngModel)]="serchTerm">
+  <ul>
+    <li *ngFor="let post of posts | filter: serchTerm">
+      <p>{{post.title}}</p>
+    </li>
+  </ul>
+
+  <p>{{counterServices.counter}}</p>
+
+  <button (click)="counterServices.inc()">+</button>
+  <button (click)="counterServices.dec()">-</button>
+</div>

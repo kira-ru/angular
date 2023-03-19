@@ -1,0 +1,14 @@
+input {
+  border: 1px solid;
+}
+input.ng-invalid {
+  border-color: red;
+}
+input.ng-untouched {
+  border-color: blue;
+}
+input.ng-valid {
+  border: green;
+}
+
+/*# sourceMappingURL=form.component.css.map */

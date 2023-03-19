@@ -1,0 +1,48 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitHandler()">
+
+  <div class="form-control">
+    <label>Email</label>
+    <input formControlName="email" type="text" placeholder="pw">
+
+    <div class="validator" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <span *ngIf="email.errors['required']">field is required!!!</span>
+      <span *ngIf="email.errors['email']">not email!!!</span>
+    </div>
+  </div>
+
+  <div class="form-control">
+    <label>Password</label>
+    <input formControlName="pass" type="text" placeholder="pw">
+
+    <div class="validator" *ngIf="password.invalid && (password.dirty || password.touched)">
+      <span *ngIf="password.errors['required']">password is required</span>
+      <span *ngIf="password.errors['minlength']">
+        password must be more than {{password.errors['minlength'].requiredLength}}
+        now: {{password.errors['minlength'].actualLength}}
+      </span>
+    </div>
+  </div>
+
+  <h2>Adress</h2>
+
+  <div class="form-control" formGroupName="address">
+    <label>Select the country</label>
+
+    <select formControlName="country">
+      <option value="ru">Russia</option>
+      <option value="usa">USA</option>
+      <option value="uk">Ukrain</option>
+    </select>
+    <input type="text" formControlName="city" placeholder="city">
+    <button (click)="setCapital()" type="button">set capital</button>
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid">submit</button>
+
+</form>
+<p>sdfsdfsdfsdfsdfs</p>
+<br>
+  <br>
+  <br>fdsfs
+  <br>
+sdfsdfsfsdfs

@@ -1,0 +1,15 @@
+input {
+  border: 1px solid;
+
+  &.ng-invalid {
+    border-color: red;
+  }
+
+  &.ng-untouched {
+    border-color: blue;
+  }
+
+  &.ng-valid {
+    border: green;
+  }
+}
